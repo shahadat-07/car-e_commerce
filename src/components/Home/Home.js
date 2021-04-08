@@ -6,7 +6,7 @@ const Home = () => {
     const [products, setProducts] = useState(fakeData);
 
     useEffect(() => {
-        fetch('http://localhost:5055/products')
+        fetch('https://vast-inlet-40416.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -17,7 +17,7 @@ const Home = () => {
     // console.log(products);
 
     // const handleAddProduct = () =>{
-    //     fetch('http://localhost:5055/addProduct',{
+    //     fetch('https://vast-inlet-40416.herokuapp.com/addProduct',{
     //         method : 'POST',
     //         headers : {'Content-Type': 'application/json'},
     //         body : JSON.stringify(fakeData[19])

@@ -11,7 +11,7 @@ const CheckOut = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5055/product/' + id)
+        fetch('https://vast-inlet-40416.herokuapp.com/product/' + id)
             .then(res => res.json())
             .then(data => {
                 setProduct(data);
@@ -26,7 +26,7 @@ const CheckOut = () => {
 
       const handleCheckOut = () =>{
           const checkOut = {...setTime,car,price};
-          fetch('http://localhost:5055/orders/' + id,{
+          fetch('https://vast-inlet-40416.herokuapp.com/orders/' + id,{
               method : 'POST',
               headers :{ 'Content-Type' : 'application/json'},
               body : JSON.stringify(checkOut)

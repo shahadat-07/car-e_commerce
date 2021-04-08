@@ -5,12 +5,12 @@ const Manage = () => {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5055/products')
+        fetch('https://vast-inlet-40416.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [products]);
     const handleDelete = (id) => {
-        fetch('http://localhost:5055/delete/' + id, {
+        fetch('https://vast-inlet-40416.herokuapp.com/delete/' + id, {
             method: 'DELETE'
         })
             .then(res => res.json())
